@@ -1,0 +1,9 @@
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event.XML
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event.dll
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event.pdb
+E:\CodeSpace\CSharpSpace\CommonLib\Event\obj\Debug\Event.csprojResolveAssemblyReference.cache
+E:\CodeSpace\CSharpSpace\CommonLib\Event\obj\Debug\Event.dll
+E:\CodeSpace\CSharpSpace\CommonLib\Event\obj\Debug\Event.pdb
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event\Event.XML
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event\Event.dll
+E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\Event\Event.pdb
