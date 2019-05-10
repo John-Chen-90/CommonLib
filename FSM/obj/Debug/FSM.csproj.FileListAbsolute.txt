@@ -1,0 +1,5 @@
+E:\CodeSpace\GitSpace\CommonLib\FSM\bin\Debug\FSM.dll
+E:\CodeSpace\GitSpace\CommonLib\FSM\bin\Debug\FSM.pdb
+E:\CodeSpace\GitSpace\CommonLib\FSM\obj\Debug\FSM.csprojResolveAssemblyReference.cache
+E:\CodeSpace\GitSpace\CommonLib\FSM\obj\Debug\FSM.dll
+E:\CodeSpace\GitSpace\CommonLib\FSM\obj\Debug\FSM.pdb

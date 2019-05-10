@@ -4,5 +4,17 @@
         <name>Event</name>
     </assembly>
     <members>
+        <member name="T:Event.DelegateHandler">
+            <summary>
+            代理
+            </summary>
+            <param name="sender"> 注册的事件者 </param>
+            <param name="args"> 参数 </param>
+        </member>
+        <member name="T:Event.EventMgr">
+            <summary>
+            事件管理器
+            </summary>
+        </member>
     </members>
 </doc>

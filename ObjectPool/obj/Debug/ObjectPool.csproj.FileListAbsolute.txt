@@ -7,3 +7,9 @@ E:\CodeSpace\CSharpSpace\CommonLib\ObjectPool\obj\Debug\ObjectPool.pdb
 E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.XML
 E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.dll
 E:\CodeSpace\CSharpSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.pdb
+E:\CodeSpace\GitSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.XML
+E:\CodeSpace\GitSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.dll
+E:\CodeSpace\GitSpace\CommonLib\CommonDll\debug\ObjectPool\ObjectPool.pdb
+E:\CodeSpace\GitSpace\CommonLib\ObjectPool\obj\Debug\ObjectPool.csprojResolveAssemblyReference.cache
+E:\CodeSpace\GitSpace\CommonLib\ObjectPool\obj\Debug\ObjectPool.dll
+E:\CodeSpace\GitSpace\CommonLib\ObjectPool\obj\Debug\ObjectPool.pdb

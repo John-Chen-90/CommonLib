@@ -1,6 +1,9 @@
 ﻿
 namespace Event
 {
+    /// <summary>
+    /// 事件管理器
+    /// </summary>
     public class EventMgr
     {
         public static EventMgr Ins
@@ -11,6 +14,8 @@ namespace Event
                 return _ins;
             }
         }
+
+        public event DelegateHandler EventHandler;
 
         private EventMgr()
         {
