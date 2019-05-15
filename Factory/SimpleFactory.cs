@@ -17,7 +17,7 @@
 
         public T CreateProduct(params object[] args)
         {
-
+            return default(T);
         }
     }
 }

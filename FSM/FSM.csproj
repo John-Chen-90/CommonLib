@@ -40,7 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StateMachine.cs" />
     <None Include="readme" />
+    <Compile Include="BaseCondition.cs" />
+    <Compile Include="BaseState.cs" />
+    <Compile Include="ICondition.cs" />
+    <Compile Include="IState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
