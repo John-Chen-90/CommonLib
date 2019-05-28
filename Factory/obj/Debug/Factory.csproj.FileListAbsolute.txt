@@ -1,0 +1,5 @@
+E:\CodeSpace\GitSpace\CommonLib\Factory\bin\Debug\Factory.dll
+E:\CodeSpace\GitSpace\CommonLib\Factory\bin\Debug\Factory.pdb
+E:\CodeSpace\GitSpace\CommonLib\Factory\obj\Debug\Factory.csprojResolveAssemblyReference.cache
+E:\CodeSpace\GitSpace\CommonLib\Factory\obj\Debug\Factory.dll
+E:\CodeSpace\GitSpace\CommonLib\Factory\obj\Debug\Factory.pdb

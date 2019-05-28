@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FSM</name>
+    </assembly>
+    <members>
+        <member name="T:FSM.IStateMachine">
+            <summary>
+            状态机接口
+            </summary>
+        </member>
+        <member name="P:FSM.IStateMachine.CurState">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="P:FSM.IStateMachine.DefaultState">
+            <summary>
+            默认接口
+            </summary>
+        </member>
+        <member name="M:FSM.IStateMachine.AddState(FSM.IState)">
+            <summary>
+            添加状态
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:FSM.IStateMachine.RemoveState(FSM.IState)">
+            <summary>
+            移除状态
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:FSM.IStateMachine.SetCurState(FSM.IState)">
+            <summary>
+            设置当前状态
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:FSM.IStateMachine.GetStateWithTag(System.String)">
+            <summary>
+            获取状态
+            </summary>
+            <param name="tag"> 状态标识 </param>
+            <returns> 状态 </returns>
+        </member>
+        <member name="M:FSM.IStateMachine.GetStateWithName(System.String)">
+            <summary>
+            获取状态
+            </summary>
+            <param name="name"> 状态名 </param>
+            <returns> 状态 </returns>
+        </member>
+        <member name="P:FSM.IStateMachine.States">
+            <summary>
+            所有的状态
+            </summary>
+        </member>
+        <member name="T:FSM.ITransition">
+            <summary>
+            状态转换
+            </summary>
+        </member>
+        <member name="P:FSM.ITransition.Name">
+            <summary>
+            转换名
+            </summary>
+        </member>
+        <member name="P:FSM.ITransition.FromState">
+            <summary>
+            从什么状态开始转换
+            </summary>
+        </member>
+        <member name="P:FSM.ITransition.ToState">
+            <summary>
+            到什么状态
+            </summary>
+        </member>
+        <member name="M:FSM.ITransition.OnCheck">
+            <summary>
+            检查条件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FSM.ITransition.OnCompleteCallBack">
+            <summary>
+            转换是否完成
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FSM.BaseStateMachine">
+            <summary>
+            状态驱动器
+            状态管理器
+            </summary>
+        </member>
+        <member name="P:FSM.BaseStateMachine.CurState">
+            <summary>
+            当前状态
+            </summary>
+        </member>
+        <member name="P:FSM.BaseStateMachine.DefaultState">
+            <summary>
+            默认状态
+            </summary>
+        </member>
+        <member name="P:FSM.BaseStateMachine.States">
+            <summary>
+            状态集合
+            </summary>
+        </member>
+        <member name="M:FSM.BaseStateMachine.#ctor(System.String,FSM.IState)">
+            <summary>
+            带参构造
+            </summary>
+            <param name="name"> 状态名 </param>
+            <param name="defaultState"> 默认状态 </param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.AddState(FSM.IState)">
+            <summary>
+            添加状态
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.GetStateWithName(System.String)">
+            <summary>
+            获得状态
+            </summary>
+            <param name="name"> 状态名 </param>
+            <returns> 找到的状态 </returns>
+        </member>
+        <member name="M:FSM.BaseStateMachine.GetStateWithTag(System.String)">
+            <summary>
+            获得状态
+            </summary>
+            <param name="tag"> 状态标识 </param>
+            <returns> 找到的状态 </returns>
+        </member>
+        <member name="M:FSM.BaseStateMachine.RemoveState(FSM.IState)">
+            <summary>
+            移除状态
+            </summary>
+            <param name="state"> 状态 </param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.SetCurState(FSM.IState)">
+            <summary>
+            设置当前状态
+            </summary>
+            <param name="state"> 状态 </param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.OnEnter(FSM.IState)">
+            <summary>
+            进入状态
+            </summary>
+            <param name="prev"> 上一个状态 </param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.OnExit(FSM.IState)">
+            <summary>
+            离开当前状态
+            </summary>
+            <param name="next"> 下一个状态 </param>
+        </member>
+        <member name="M:FSM.BaseStateMachine.OnUpdate(System.Single)">
+            <summary>
+            帧更新
+            </summary>
+            <param name="deltaTime"> 每帧更新时间 </param>
+        </member>
+        <member name="T:FSM.BaseTransition">
+            <summary>
+            状态转换
+            </summary>
+        </member>
+        <member name="M:FSM.BaseTransition.#ctor(System.String,FSM.IState,FSM.IState)">
+            <summary>
+            带参构造
+            </summary>
+            <param name="name"> 转换名 </param>
+            <param name="from"> 从什么状态开始转换 </param>
+            <param name="to"> 转换到什么状态 </param>
+        </member>
+        <member name="P:FSM.BaseTransition.Name">
+            <summary>
+            本次转换的名字
+            </summary>
+        </member>
+        <member name="P:FSM.BaseTransition.ToState">
+            <summary>
+            转换到的状态
+            </summary>
+        </member>
+        <member name="P:FSM.BaseTransition.FromState">
+            <summary>
+            当前需要转换的状态
+            </summary>
+        </member>
+        <member name="M:FSM.BaseTransition.OnCheck">
+            <summary>
+            检测能否转换
+            </summary>
+            <returns> 转换结果 </returns>
+        </member>
+        <member name="M:FSM.BaseTransition.OnCompleteCallBack">
+            <summary>
+            检测转换函数是否执行完毕
+            </summary>
+            <returns> 是否执行完毕 </returns>
+        </member>
+        <member name="T:FSM.BaseState">
+            <summary>
+            基础状态
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.Name">
+            <summary>
+            状态名
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.Tag">
+            <summary>
+            状态标识
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.Timer">
+            <summary>
+            计时器
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.Parent">
+            <summary>
+            状态机
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.PreState">
+            <summary>
+            上一个状态(从上一个状态转换而来)
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.NextState">
+            <summary>
+            下一个状态(已经转换到的状态)
+            </summary>
+        </member>
+        <member name="P:FSM.BaseState.Transitions">
+            <summary>
+            本状态下的所有转换
+            </summary>
+        </member>
+        <member name="M:FSM.BaseState.#ctor(System.String)">
+            <summary>
+            带参构造
+            </summary>
+            <param name="name"> 状态名 </param>
+        </member>
+        <member name="M:FSM.BaseState.AddTransition(FSM.ITransition)">
+            <summary>
+            添加状态转换
+            </summary>
+            <param name="transition"> 本状态下的转换 </param>
+        </member>
+        <member name="M:FSM.BaseState.OnEnter(FSM.IState)">
+            <summary>
+            进入本状态
+            </summary>
+            <param name="prev"> 上一个状态 </param>
+        </member>
+        <member name="M:FSM.BaseState.OnExit(FSM.IState)">
+            <summary>
+            离开本状态
+            </summary>
+            <param name="next"> 下一个状态 </param>
+        </member>
+        <member name="M:FSM.BaseState.OnUpdate(System.Single)">
+            <summary>
+            每帧执行
+            </summary>
+            <param name="deltaTime"> 每帧更新时间 </param>
+        </member>
+        <member name="M:FSM.BaseState.SetStateMachine(FSM.IStateMachine)">
+            <summary>
+            设置本状态的父状态机
+            </summary>
+            <param name="stateMachine"></param>
+        </member>
+        <member name="M:FSM.BaseState.DoTransition(FSM.ITransition)">
+            <summary>
+            执行转换
+            </summary>
+            <param name="transition"></param>
+        </member>
+        <member name="T:FSM.VoidStateDelegate">
+            <summary>
+            无参代理
+            </summary>
+        </member>
+        <member name="T:FSM.VoidStateDelegateState">
+            <summary>
+            带状态参数的代理
+            </summary>
+            <param name="state"></param>
+        </member>
+        <member name="T:FSM.VoidStateDelegateFloat">
+            <summary>
+            带浮点数参数的代理
+            </summary>
+            <param name="f"> 浮点数 </param>
+        </member>
+        <member name="T:FSM.IState">
+            <summary>
+            状态接口
+            </summary>
+        </member>
+        <member name="P:FSM.IState.Timer">
+            <summary>
+            定时器
+            </summary>
+        </member>
+        <member name="P:FSM.IState.Name">
+            <summary>
+            状态名
+            </summary>
+        </member>
+        <member name="P:FSM.IState.Tag">
+            <summary>
+            状态标识
+            </summary>
+        </member>
+        <member name="M:FSM.IState.OnEnter(FSM.IState)">
+            <summary>
+            进入状态
+            </summary>
+            <param name="prev"> 上一个状态 </param>
+        </member>
+        <member name="M:FSM.IState.OnExit(FSM.IState)">
+            <summary>
+            离开状态
+            </summary>
+            <param name="next"> 下一个状态 </param>
+        </member>
+        <member name="M:FSM.IState.OnUpdate(System.Single)">
+            <summary>
+            帧更新
+            </summary>
+            <param name="deltaTime"> 每帧更新时间 </param>
+        </member>
+        <member name="P:FSM.IState.Transitions">
+            <summary>
+            本状态下所有转换
+            </summary>
+        </member>
+        <member name="M:FSM.IState.AddTransition(FSM.ITransition)">
+            <summary>
+            添加转换
+            </summary>
+            <param name="transition"> 本状态下的转换 </param>
+        </member>
+        <member name="P:FSM.IState.Parent">
+            <summary>
+            状态机
+            </summary>
+        </member>
+        <member name="M:FSM.IState.SetStateMachine(FSM.IStateMachine)">
+            <summary>
+            设置状态机
+            </summary>
+            <param name="stateMachine"></param>
+        </member>
+    </members>
+</doc>
